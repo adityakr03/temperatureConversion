@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+    font-family: "Anta", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    overflow: hidden;
+    background: linear-gradient(to right, #0575E6, #f5163b);
+    position: relative; /* Ensure snowflakes are positioned relative to the body */
+}
+
+/* Heading Styles */
+h1 {
+    color: #d45632;
+    font-size: 2em;
+    text-decoration: underline dashed;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 1.2em;
+}
+
+/* Form Styles */
+form {
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 600px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2); /* Adjust the opacity as needed */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    transition: all 1s ease-in-out;
+}
+
+/* Optional: Adjust text color for better visibility */
+form h1, form label, form button {
+    color: #333; /* Adjust text color as needed */
+}
+
+
+/* Button Styles */
+button {
+    margin: 15px 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    border: 2px solid transparent; /* Transparent border */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 20px; /* Adjust the border radius */
+    cursor: pointer;
+    transition: background-color 0.8s, transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Shadow effect */
+    background-clip: padding-box; /* Apply gradient only to padding box */
+}
+
+button:hover {
+    animation: heartbeat 1s infinite;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+    transform: scale(1.05);
+}
+
+/* Gradient border style */
+button {
+    border-image: linear-gradient(135deg, #0575E6, #f5163b) 1; /* Gradient border */
+    border-image-slice: 1; /* Border image slice */
+}
+
+/* Input Styles */
+#round {
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+#textbox {
+    border: 2px solid transparent; /* Transparent border */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 12px;
+    width: calc(100% - 24px);
+    transition: all 0.8s ease-in-out;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)); /* Apply gradient background */
+    color: #fff; /* Text color */
+    font-size: 1em;
+    font-family: "Anta", sans-serif; /* Match font family with the form */
+}
+
+#textbox:focus {
+    outline: 2px solid #d2dbd0; /* Outline color on focus */
+}
+
+
+/* Animation Styles */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@keyframes heartbeat {
+    0% { font-size: 1em; }
+    50% { font-size: 1.2em; }
+    100% { font-size: 1em; }
+}
+
+/* Result Styles */
+#result {
+    font-size: 1em;
+    font-weight: 100;
+    color: #007bff;
+    animation: pulse 1s infinite, heartbeat 1s infinite;
+    transition: all 0.5s ease-in-out;
+}
